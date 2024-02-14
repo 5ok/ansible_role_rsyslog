@@ -14,6 +14,8 @@
       tags:
         - rsyslog
         - rsyslog:setup
+  tags:
+    - always
 
 # Common configuration tasks tasks
 - name: include config tasks
@@ -23,6 +25,8 @@
       tags:
         - rsyslog
         - rsyslog:config
+  tags:
+    - always
 
 # Common service tasks
 - name: include service tasks
@@ -32,3 +36,5 @@
       tags:
         - rsyslog
         - rsyslog:service
+  tags:
+    - always
