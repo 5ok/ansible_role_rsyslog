@@ -5,7 +5,7 @@ rsyslog_packages: "{{ __rsyslog_packages }}"
 rsyslog_service: "{{ __rsyslog_service }}"
 
 rsyslog_file_conf: "{{ __rsyslog_file_conf }}"
-rsyslog_dir_conf: "{{ __rsyslog_dir_confs }}"
+rsyslog_dir_conf: "{{ __rsyslog_dir_conf }}"
 
 rsyslog_backup: True
 
