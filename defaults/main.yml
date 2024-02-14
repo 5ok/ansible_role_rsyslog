@@ -1,0 +1,15 @@
+---
+# defaults file for hudecof.rsyslog
+
+rsyslog_packages: "{{ __rsyslog_packages }}"
+rsyslog_service: "{{ __rsyslog_service }}"
+
+rsyslog_file_conf: "{{ __rsyslog_file_conf }}"
+rsyslog_dir_conf: "{{ __rsyslog_dir_confs }}"
+
+rsyslog_backup: True
+
+rsyslog_service_enabled: yes
+rsyslog_service_state: started
+
+rsyslog_conf_files: []
