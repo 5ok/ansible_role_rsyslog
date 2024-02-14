@@ -11,7 +11,7 @@
 - name: "setup rsyslog configuration"
   ansible.builtin.template:
     src: "{{ file.src }}"
-    dest: "{{ rsyslog_dir_conf }}/{{ file.dest | default(file.src)}}"
+    dest: "{{ rsyslog_dir_conf }}/{{ file.dest }}"
     owner: root
     group: root
     mode: 0640
