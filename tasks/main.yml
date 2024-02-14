@@ -1,5 +1,5 @@
 ---
-# tasks file for chrony
+# tasks file for rsyslog
 
 - name: Add the OS specific varibles
   include_vars: "os-{{ ansible_os_family }}.yml"
@@ -10,19 +10,19 @@
 - name: include packages tasks
   include: packages-{{ ansible_os_family }}.yml
   tags:
-    - chrony
-    - chrony:setup
+    - rsyslog
+    - rsyslog:setup
 
 # Common configuration tasks tasks
 - name: include config tasks
   include: config.yml
   tags:
-    - chrony
-    - chrony:config
+    - rsyslog
+    - rsyslog:config
 
 # Common service tasks
 - name: include service tasks
   include: service.yml
   tags:
-    - chrony
-    - chrony:service
+    - rsyslog
+    - rsyslog:service
