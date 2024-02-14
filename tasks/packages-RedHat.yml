@@ -3,6 +3,6 @@
   ansible.builtin.yum:
     pkg: "{{ package.name }}"
     state: "{{ package.state }}"
-  with_items: "{{ rsyslog_packages }}"
+  loop: "{{ rsyslog_packages }}"
   loop_control:
     loop_var: package

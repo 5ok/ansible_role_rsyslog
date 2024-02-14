@@ -2,27 +2,33 @@
 # tasks file for rsyslog
 
 - name: Add the OS specific varibles
-  include_vars: "os-{{ ansible_os_family }}.yml"
+  ansible.builtin.include_vars: "os-{{ ansible_os_family }}.yml"
   tags:
     - always
 
 # Debian(setup) specific tasks
 - name: include packages tasks
-  include: packages-{{ ansible_os_family }}.yml
-  tags:
-    - rsyslog
-    - rsyslog:setup
+  ansible.builtin.include_tasks:
+    file: packages-{{ ansible_os_family }}.yml
+    apply:
+      tags:
+        - rsyslog
+        - rsyslog:setup
 
 # Common configuration tasks tasks
 - name: include config tasks
-  include: config.yml
-  tags:
-    - rsyslog
-    - rsyslog:config
+  ansible.builtin.include_tasks:
+    file: config.yml
+    apply:
+      tags:
+        - rsyslog
+        - rsyslog:config
 
 # Common service tasks
 - name: include service tasks
-  include: service.yml
-  tags:
-    - rsyslog
-    - rsyslog:service
+  ansible.builtin.include_tasks:
+    file: service.yml
+    apply:
+      tags:
+        - rsyslog
+        - rsyslog:service
