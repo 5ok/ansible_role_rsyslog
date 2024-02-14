@@ -6,5 +6,3 @@ __rsyslog_service: rsyslog
 
 __rsyslog_file_conf: /etc/rsyslog.conf
 __rsyslog_dir_conf: /etc/rsyslog.d
-
-

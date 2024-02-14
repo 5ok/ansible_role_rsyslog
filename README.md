@@ -1,4 +1,4 @@
-# Chrony
+# rsyslog
 
 Ansible role to setup ntp service  based on chrony
 
