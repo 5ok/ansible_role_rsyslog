@@ -5,6 +5,8 @@
     path: "{{ rsyslog_file_conf }}"
     regexp: '^\$IncludeConfig\s+{{ rsyslog_dir_conf }}/.*.conf'
     line: "$IncludeConfig {{ rsyslog_dir_conf }}"
+  notify:
+    - restart rsyslog
 
 - name: "setup rsyslog configuration"
   ansible.builtin.template:
